@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3F5C761E16479E00E13F0B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F5C751E16479E00E13F0B /* README.md */; };
 		2DA52FAD1E152F5100EA5C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA52FAC1E152F5100EA5C39 /* AppDelegate.swift */; };
 		2DA52FAF1E152F5100EA5C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA52FAE1E152F5100EA5C39 /* ViewController.swift */; };
 		2DA52FB21E152F5100EA5C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA52FB01E152F5100EA5C39 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D3F5C751E16479E00E13F0B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2DA52FA91E152F5000EA5C39 /* SideslipDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideslipDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA52FAC1E152F5100EA5C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA52FAE1E152F5100EA5C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		2DA52FA01E152F5000EA5C39 = {
 			isa = PBXGroup;
 			children = (
+				2D3F5C751E16479E00E13F0B /* README.md */,
 				2DA52FAB1E152F5100EA5C39 /* SideslipDemo */,
 				2DA52FC01E152F5100EA5C39 /* SideslipDemoUITests */,
 				2DA52FAA1E152F5000EA5C39 /* Products */,
@@ -249,6 +252,7 @@
 			files = (
 				2DA52FAF1E152F5100EA5C39 /* ViewController.swift in Sources */,
 				2DA52FAD1E152F5100EA5C39 /* AppDelegate.swift in Sources */,
+				2D3F5C761E16479E00E13F0B /* README.md in Sources */,
 				2DA52FE01E15386300EA5C39 /* UIStoryboard+Addition.swift in Sources */,
 				2DA52FD01E15303800EA5C39 /* LeftMenuViewController.swift in Sources */,
 				2DA52FE41E15481A00EA5C39 /* Commons.swift in Sources */,
@@ -468,6 +472,7 @@
 				2DA52FC81E152F5100EA5C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DA52FC91E152F5100EA5C39 /* Build configuration list for PBXNativeTarget "SideslipDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +481,7 @@
 				2DA52FCB1E152F5100EA5C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
