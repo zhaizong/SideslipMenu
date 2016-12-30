@@ -61,8 +61,8 @@ extension MainTabBarController {
     
     if let homeTabItem = tabBar.items?[kHomeTabIndex] {
       homeTabItem.title = "首页"
-      homeTabItem.image = UIImage(named: "Home_selected")?.withRenderingMode(.alwaysOriginal)
-      homeTabItem.selectedImage = UIImage(named: "Home_unselected")?.withRenderingMode(.alwaysOriginal)
+      homeTabItem.image = UIImage(named: "Home_unselected")?.withRenderingMode(.alwaysOriginal)
+      homeTabItem.selectedImage = UIImage(named: "Home_selected")?.withRenderingMode(.alwaysOriginal)
     }
     
     if let contactsTabItem = tabBar.items?[kContactsTabIndex] {

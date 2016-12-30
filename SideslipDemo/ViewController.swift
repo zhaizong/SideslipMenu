@@ -46,18 +46,12 @@ class ViewController: UIViewController {
     _setupApperance()
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
 }
 
 extension ViewController {
   
   fileprivate func _setupApperance() {
-    view.backgroundColor = UIColor.blue
+    view.backgroundColor = UIColor.yellow
     
     leftMenuViewController = LeftMenuViewController.instanceFromStoryboard()
 //    适配 4.7 和 5.5 寸屏幕的缩放操作，有偶发性小 bug
@@ -152,8 +146,6 @@ extension ViewController {
                                         y: view.center.y)
       panGesture.view!.transform = CGAffineTransform.identity.scaledBy(x: proportion, y: proportion)
 //      左侧菜单动画
-//      leftMenuViewController.view.center = CGPoint(x: _centerOfLeftViewAtBeginning.x + _distanceOfLeftView * realtimeProportion,
-//                                                   y: leftMenuViewController.view.center.y)
       leftMenuViewController.view.center = CGPoint(x: _centerOfLeftViewAtBeginning.x + _distanceOfLeftView * realtimeProportion,
                                                    y: _centerOfLeftViewAtBeginning.y - (_proportionOfLeftView - 1) * leftMenuViewController.view.frame.height * realtimeProportion / 2)
       let leftScaleProportion = 0.8 + (_proportionOfLeftView - 0.8) * realtimeProportion
@@ -193,7 +185,7 @@ extension ViewController {
   
 //  执行三种动画：显示左侧菜单、显示主页、显示右侧菜单
   fileprivate func _doTheAnimate(_ proportion: CGFloat, showWhat: String) {
-    UIView.animate(withDuration: 0.4, delay: 0, options: .init(rawValue: 0), animations: { () -> Void in
+    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { () -> Void in
 //      移动首页中心
       self.mainView.center = CGPoint(x: self.view.center.x + self._distance, y: self.view.center.y)
 //      缩放首页

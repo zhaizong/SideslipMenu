@@ -33,11 +33,6 @@ class LeftMenuViewController: UIViewController, MainStoryboardViewController {
     
     _setupApperance()
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
   
   static func instanceFromStoryboard<T>() -> T {
     let vc = UIStoryboard.mainStoryboard().instantiateViewController(withIdentifier: "LeftMenuViewController")
@@ -62,6 +57,9 @@ extension LeftMenuViewController {
     menuTableView.dataSource = self
     menuTableView.delegate = self
     menuTableView.tableFooterView = UIView(frame: .zero)
+    menuTableView.backgroundColor = UIColor.clear
+    
+    avatarImageView.layer.cornerRadius = 5
     
     heightLayoutConstraintOfMenuTableView.constant = SD_Screen_Height < 500 ? SD_Screen_Height * (568 - 221) / 568 : 347
     view.frame = CGRect(origin: .zero, size: CGSize(width: 320 * 0.78, height: SD_Screen_Height))
