@@ -17,12 +17,12 @@ class MainTabBarController: UITabBarController {
   // MARK: - Commons
   
   fileprivate let kHomeTabIndex     = 0
-  fileprivate let kContactsTabIndex = 1
+//  fileprivate let kContactsTabIndex = 1
   
   // MARK: - Property
   
   fileprivate var _homeViewController: HomeViewController!
-  fileprivate var _contactsController: UIViewController!
+//  fileprivate var _contactsController: UIViewController!
   
   /*override var selectedIndex: Int {
     didSet {
@@ -55,21 +55,21 @@ extension MainTabBarController {
   
   fileprivate func _setupContentViewControllers() {
     _homeViewController = UIStoryboard.mainStoryboard().instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-    _contactsController = UIStoryboard.mainStoryboard().instantiateViewController(withIdentifier: "ContactsViewController")
+//    _contactsController = UIStoryboard.mainStoryboard().instantiateViewController(withIdentifier: "ContactsViewController")
     
-    viewControllers = [_homeViewController, _contactsController]
+    viewControllers = [_homeViewController]
     
     if let homeTabItem = tabBar.items?[kHomeTabIndex] {
       homeTabItem.title = "首页"
       homeTabItem.image = UIImage(named: "Home_unselected")?.withRenderingMode(.alwaysOriginal)
       homeTabItem.selectedImage = UIImage(named: "Home_selected")?.withRenderingMode(.alwaysOriginal)
     }
-    
+    /*
     if let contactsTabItem = tabBar.items?[kContactsTabIndex] {
       contactsTabItem.title = "通讯录"
       contactsTabItem.image = UIImage(named: "icon_star_p")?.withRenderingMode(.alwaysOriginal)
     }
-    
+    */
   }
   
 }

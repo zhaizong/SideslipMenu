@@ -30,8 +30,8 @@ class ViewController: UIViewController {
   var blackCover: UIView! // 侧滑菜单黑色半透明遮罩层
   
   // 侧滑所需参数
-  fileprivate let _fullDistance: CGFloat = 0.78
-  fileprivate let _proportion: CGFloat = 0.77
+  fileprivate let _fullDistance: CGFloat = 0.78 // 右侧视图左边界距离距离屏幕左边界的距离占屏幕宽度的比例
+  fileprivate let _proportion: CGFloat = 0.77 // 右侧视图的高度占屏幕高度的比例
   fileprivate var _distance: CGFloat = 0
   fileprivate var _centerOfLeftViewAtBeginning: CGPoint!
   fileprivate var _proportionOfLeftView: CGFloat = 1
@@ -185,7 +185,7 @@ extension ViewController {
   
 //  执行三种动画：显示左侧菜单、显示主页、显示右侧菜单
   fileprivate func _doTheAnimate(_ proportion: CGFloat, showWhat: String) {
-    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { () -> Void in
+    UIView.animate(withDuration: 0.3, delay: 0, options: .init(rawValue: 0), animations: { () -> Void in
 //      移动首页中心
       self.mainView.center = CGPoint(x: self.view.center.x + self._distance, y: self.view.center.y)
 //      缩放首页
